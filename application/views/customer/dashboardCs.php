@@ -68,7 +68,7 @@
                                                 <a href=" <?= base_url('transaksi/sewa/tambah_sewa/' . $rm->id_rumah); ?> " class="btn btn-warning  ml-1 ">Sewa</a>
 
                                             <?php } else { ?>
-                                                <a href=" <?= base_url('transaksi/sewa/tambah_sewa/' . $rm->id_rumah); ?> " class="btn btn-warning  ml-1 disabled ">Sewa</a>
+                                                <a href=" <?= base_url('transaksi/sewa/tambah_sewa/' . $rm->id_rumah); ?> " class="btn btn-warning  ml-1 ">Sewa</a>
                                             <?php } ?>
 
 

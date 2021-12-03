@@ -19,16 +19,25 @@ class Dashboard extends CI_Controller
         }
 
 
+		$user = $this->session->userdata('id_customer'); 
+		// var_dump($user);
+		// die();
+
         $data['rumah'] = $this->kpr_model->get_data('rumah')->num_rows();
         $data['transaksi'] = $this->kpr_model->get_data('transaksi')->num_rows();
         $data['karyawan'] = $this->kpr_model->get_data('karyawan')->num_rows();
         $data['customer'] = $this->kpr_model->get_data('customer')->num_rows();
         $data['grafik'] = $this->kpr_model->dataGrafik();
+		
+        $data['berita'] = $this->kpr_model->get_data('tb_berita')->result();
+		// cek user
+		$data['get'] = $this->kpr_model->getBacaBerita($user);
+		$data['getbaca'] = $this->kpr_model->getbaca();
 
 
 
         $this->load->view('templates_admin/header');
-        $this->load->view('templates_admin/sidebar');
+        $this->load->view('templates_admin/sidebar',$data);
         $this->load->view('admin/dashboard', $data);
         $this->load->view('templates_admin/footer');
     }

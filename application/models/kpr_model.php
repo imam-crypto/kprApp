@@ -114,4 +114,18 @@ class Kpr_model extends CI_Model
 
         return $this->db->query(" SELECT * FROM rumah WHERE kode_type = 'SCLS' ")->result();
     }
+	public function cek_baca_user($id_customer)
+    {
+
+        return $this->db->query(" SELECT * FROM tb_berita join tb_status_berita on tb_berita.id_berita=tb_status_berita.id_berita WHERE tb_status_berita.status_baca = 0 AND id_customer='$id_customer'   ")->num_rows();
+    }
+	public function getBacaBerita($id_customer)
+	{
+		return $this->db->query(" SELECT * FROM tb_status_berita WHERE id_customer='$id_customer' ")->result();
+	}
+	public function getbaca()
+    {
+
+        return $this->db->query(" SELECT * FROM tb_berita order by id_berita")->result();
+    }
 }

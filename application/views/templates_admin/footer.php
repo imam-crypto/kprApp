@@ -8,6 +8,7 @@
 </footer>
 
 
+
 <!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
@@ -29,6 +30,12 @@
 <script src="<?= base_url('assets/assets_admin') ?>/vendor/dist/utils.js"></script>
 
 <!-- Page level custom scripts -->
+
+<script type="text/javascript">
+$(window).on('load', function() {
+    $('#myModal').modal('show');
+});
+</script>
 
 
 <script src=" <?= base_url('assets/assets_admin') ?>/vendor/datatables/jquery.dataTables.min.js"></script>

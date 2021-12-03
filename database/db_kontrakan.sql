@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 06 Sep 2020 pada 17.41
+-- Waktu pembuatan: 08 Apr 2021 pada 07.06
 -- Versi server: 10.4.6-MariaDB
 -- Versi PHP: 7.3.8
 
@@ -429,12 +429,13 @@ INSERT INTO `rumah` (`id_rumah`, `kode_type`, `ukuran`, `no_rumah`, `warna`, `st
 (55, 'NCLS', '200/100', '77822', 'putih', '0', 25000000, 100000, '22', 'img5.jpg'),
 (57, 'CLS', '58/80', '544s', 'putih', '0', 27000000, 300000, '22', 'cluster21.jpg'),
 (58, 'SCLS', '58/80', '115', 'putih', '0', 30000000, 300000, '333', 'clut.jpg'),
-(59, 'CLS', '45/90', '544', 'Hijau', '1', 29000000, 200000, '22', 'img.jpg'),
+(59, 'CLS', '45/90', '544', 'Hijau', '0', 29000000, 200000, '22', 'img.jpg'),
 (60, 'SCLS', '200/300', '90N', 'hitam', '0', 40000000, 300000, '10', 'img3.jpg'),
 (61, 'SCLS', '200/300', '770P', 'putih', '1', 50000000, 200000, '20', 'img31.jpg'),
 (62, 'SCLS', '200/300', '544s', 'hitam', '1', 50000000, 250000, '22', 'cluster22.jpg'),
 (63, 'CLS', '78/100', '22P', 'Hijau', '1', 34000000, 25, '22', 'img51.jpg'),
-(64, 'CLS', '78/100', '2231', 'Kuning', '1', 35000, 2000000, '50', 'img1.jpg');
+(64, 'CLS', '78/100', '2231', 'Kuning', '1', 35000, 2000000, '50', 'img1.jpg'),
+(65, 'CLS', '58/80', '544sss', 'hitam', '1', 900000000, 25, '50', 'bor.jpg');
 
 -- --------------------------------------------------------
 
@@ -471,7 +472,8 @@ INSERT INTO `transaksi` (`id_booking`, `id_customer`, `id_rumah`, `tgl_sewa`, `t
 (19, 12, 55, '2020-09-02', '2020-11-30', 25000000, 100000, '0000-00-00', 0, 'belum_kembali', 'belum_selesai', '', 0),
 (20, 12, 60, '2020-09-10', '2020-12-31', 40000000, 300000, '0000-00-00', 0, 'belum_kembali', 'belum_selesai', '', 0),
 (21, 12, 60, '2020-09-10', '2020-12-31', 40000000, 300000, '0000-00-00', 0, 'belum_kembali', 'belum_selesai', '', 0),
-(22, 12, 60, '2020-09-30', '2021-03-27', 40000000, 300000, '0000-00-00', 0, 'belum_kembali', 'belum_selesai', '', 0);
+(22, 12, 60, '2020-09-30', '2021-03-27', 40000000, 300000, '0000-00-00', 0, 'belum_kembali', 'belum_selesai', '', 0),
+(23, 12, 59, '2020-09-01', '2020-11-04', 29000000, 200000, '0000-00-00', 0, 'belum_kembali', 'belum_selesai', 'ids.PNG', 1);
 
 -- --------------------------------------------------------
 
@@ -770,13 +772,13 @@ ALTER TABLE `pma__savedsearches`
 -- AUTO_INCREMENT untuk tabel `rumah`
 --
 ALTER TABLE `rumah`
-  MODIFY `id_rumah` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `id_rumah` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
 -- AUTO_INCREMENT untuk tabel `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_booking` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id_booking` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT untuk tabel `type`

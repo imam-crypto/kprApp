@@ -11,8 +11,12 @@
                 <div class="sidebar-brand-icon">
                     <i class="fas fa-industry"></i>
                 </div>
-                <span class="sidebar-brand-text text-xs text-decoration-none  align-center">Purnama Industries <sup>tbk</sup></span>
+                <span class="sidebar-brand-text text-xs text-decoration-none  align-center">Purnama Industries
+                    <sup>tbk</sup></span>
             </a>
+
+
+
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
@@ -111,9 +115,11 @@
                     </button>
 
                     <!-- Topbar Search -->
-                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="button">
                                     <i class="fas fa-search fa-sm"></i>
@@ -127,22 +133,72 @@
 
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-search fa-fw"></i>
                             </a>
 
+                        </li>
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                <!-- Counter - Alerts -->
+                                <span class="badge badge-danger badge-counter">
+
+
+
+                                </span>
+                            </a>
+                            <!-- Dropdown - Alerts -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                    Alerts Center
+                                </h6>
+
+                                <?php foreach ($getbaca as $gb): ?>
+                                <?php foreach ($get as $gt): ?>
+                                <?php if($gt->id_berita != $gb->id_berita){ ?>
+
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500"> <?= $gb->judul ?> </div>
+                                        <span class="font-weight-bold"><?= $gb->judul ?> </span>
+                                    </div>
+                                </a>
+                                <?php }else{ ?>
+
+
+
+                                <?php } ?>
+                                <?php endforeach ?>
+                                <?php endforeach ?>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+
+
+                            </div>
                         </li>
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $this->session->userdata('nama') ?></span>
-                                <img class="img-profile rounded-circle" src=" <?= base_url('assets/assets_admin/img/home.png') ?> ">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span
+                                    class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $this->session->userdata('nama') ?></span>
+                                <img class="img-profile rounded-circle"
+                                    src=" <?= base_url('assets/assets_admin/img/home.png') ?> ">
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
 
                                 <a class="dropdown-item" href=" <?= base_url('auth/ganti_password') ?> ">
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -152,7 +208,8 @@
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
+                                    Logo
+                                    ut
                                 </a>
                             </div>
                         </li>
@@ -160,4 +217,4 @@
                     </ul>
 
                 </nav>
-                <!-- End of Topbar -->
+                <!-- End of Topbar -->->
